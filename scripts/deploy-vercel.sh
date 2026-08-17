@@ -33,9 +33,15 @@ echo "▸ Collegamento progetto a Vercel…"
 vercel link --yes --project "pathwise" 2>/dev/null || vercel link --yes
 
 echo "▸ Deploy in PRODUZIONE…"
-DEPLOY_URL="$(vercel deploy --prod --yes | tail -1)"
+# L'output termina con "✓ Ready in 1m": estraiamo l'URL reale dalla riga
+# "▲ Aliased https://..." (tail -1 catturerebbe la riga sbagliata).
+DEPLOY_URL="$(vercel deploy --prod --yes 2>&1 | grep -oE 'https://[a-z0-9.-]+\.vercel\.app' | tail -1)"
+if [ -z "$DEPLOY_URL" ]; then
+  echo "✗ Deploy eseguito ma URL non rilevato; verifica con: vercel inspect --prod"
+  exit 1
+fi
 echo
 echo "✔ Landing page in produzione:  $DEPLOY_URL"
 # Nota: `pathwise.vercel.app` può essere già occupato; Vercel assegna un alias
-# libero (es. pathwise-umber.vercel.app). L'URL esatto è quello stampato sopra,
-# o lo si legge con:  vercel inspect --prod
+# libero (es. pathwise-umber.vercel.app). L'URL esatto è quello stampato sopra.
+# Serve `2>&1`: Vercel CLI scrive parte dell'output su stderr.
