@@ -22,9 +22,13 @@ Prerequisiti: `gh` e `vercel` CLI autenticati (`gh auth status` / `vercel whoami
 # 1) Repository pubblica  pathwise-app  + primo commit + push
 bash scripts/deploy-github.sh
 
-# 2) Landing page in produzione  →  https://pathwise.vercel.app
+# 2) Landing page in produzione (URL reale stampato dallo script)
 bash scripts/deploy-vercel.sh
 ```
+
+> **URL produzione attuale:** https://pathwise-umber.vercel.app
+> (l'alias `pathwise.vercel.app` era già occupato: Vercel assegna un alias libero
+> al primo deploy; lo script stampa sempre l'URL esatto prodotto dal deploy).
 
 Gli script sono **idempotenti** e sicuri da rieseguire.
 

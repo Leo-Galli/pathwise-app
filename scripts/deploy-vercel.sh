@@ -36,4 +36,6 @@ echo "▸ Deploy in PRODUZIONE…"
 DEPLOY_URL="$(vercel deploy --prod --yes | tail -1)"
 echo
 echo "✔ Landing page in produzione:  $DEPLOY_URL"
-echo "  (alias predefinito: https://pathwise.vercel.app)"
+# Nota: `pathwise.vercel.app` può essere già occupato; Vercel assegna un alias
+# libero (es. pathwise-umber.vercel.app). L'URL esatto è quello stampato sopra,
+# o lo si legge con:  vercel inspect --prod

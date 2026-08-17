@@ -46,9 +46,9 @@ else
 fi
 
 echo "▸ Configurazione utente git locale…"
-# Username: preferisce l'API REST, ma se è degradata (503) ripiega sul nome
-# configurato in git (l'autenticazione gh è già stata verificata sopra).
-GITHUB_USER="$(gh api user -q .login 2>/dev/null || git config user.name)"
+# Username: priorità a git config (mai fallisce) e solo in assenza all'API REST
+# (che può essere degradata 503/504 e restituire JSON di errore su stdout).
+GITHUB_USER="$(git config user.name 2>/dev/null || gh api user -q .login 2>/dev/null)"
 if [ -z "$GITHUB_USER" ]; then
   echo "✗ Impossibile determinare l'utente GitHub. Imposta: git config user.name"
   exit 1
@@ -73,9 +73,10 @@ else
   else
     # Ci sono già commit: crea la repo, collega il remote e fai il push.
     gh_retry gh repo create "$REPO_NAME" --public --source . --remote origin --push || {
-      # fallback: crea e aggiunge remote manualmente
+      # fallback: crea e aggiunge remote manualmente (idempotente: se `--push`
+      # era già riuscito ad aggiungere origin, evita il doppio add che romperebbe set -e)
       gh_retry gh repo create "$GITHUB_USER/$REPO_NAME" --public --confirm
-      git remote add origin "https://github.com/$GITHUB_USER/$REPO_NAME.git"
+      git remote add origin "https://github.com/$GITHUB_USER/$REPO_NAME.git" 2>/dev/null || true
     }
   fi
 fi
