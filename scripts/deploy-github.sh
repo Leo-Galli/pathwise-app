@@ -20,7 +20,8 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
 echo "▸ Verifica autenticazione GitHub…"
-gh auth status --quiet || { echo "✗ Esegui prima: gh auth login"; exit 1; }
+# gh 2.97 non ha il flag --quiet: l'exit code di `gh auth status` è sufficiente
+gh auth status >/dev/null 2>&1 || { echo "✗ Esegui prima: gh auth login"; exit 1; }
 
 echo "▸ Inizializzazione repository git locale…"
 if [ ! -d .git ]; then
