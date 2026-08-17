@@ -35,7 +35,9 @@ vercel link --yes --project "pathwise" 2>/dev/null || vercel link --yes
 echo "▸ Deploy in PRODUZIONE…"
 # L'output termina con "✓ Ready in 1m": estraiamo l'URL reale dalla riga
 # "▲ Aliased https://..." (tail -1 catturerebbe la riga sbagliata).
-DEPLOY_URL="$(vercel deploy --prod --yes 2>&1 | grep -oE 'https://[a-z0-9.-]+\.vercel\.app' | tail -1)"
+# `|| true` evita che set -e interrompa prima del guard sotto (e lascia che
+# sia il messaggio "URL non rilevato" a spiegare l'errore).
+DEPLOY_URL="$(vercel deploy --prod --yes 2>&1 | grep -oE 'https://[a-z0-9.-]+\.vercel\.app' | tail -1)" || true
 if [ -z "$DEPLOY_URL" ]; then
   echo "✗ Deploy eseguito ma URL non rilevato; verifica con: vercel inspect --prod"
   exit 1
