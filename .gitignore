@@ -1,0 +1,54 @@
+# ─────────────────────────────────────────────────────────────
+# PathWise — .gitignore di progetto (Android + Next.js + tooling)
+# ─────────────────────────────────────────────────────────────
+
+# ── Android / Gradle ──────────────────────────────────────────
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# ── Android Studio / IDE ──────────────────────────────────────
+android/.idea/
+*.iml
+.idea/
+.vscode/
+
+# ── Kotlin ────────────────────────────────────────────────────
+*.kotlin_module
+
+# ── Node / Next.js ────────────────────────────────────────────
+node_modules/
+web/node_modules/
+web/.next/
+web/out/
+web/.vercel/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Ambiente / segreti ────────────────────────────────────────
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# ── Vari / OS / editor ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+*.pid
+
+# ── Freebuff / desktop (file locali dell'ambiente di sviluppo) ─
+.freebuff/
+*.db
+*.db-shm
+*.db-wal

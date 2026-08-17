@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema base: la UI è interamente Jetpack Compose (Material 3 in Theme.kt) -->
+    <style name="Theme.PathWise" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/night_950</item>
+        <item name="android:statusBarColor">@color/night_950</item>
+        <item name="android:navigationBarColor">@color/night_950</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

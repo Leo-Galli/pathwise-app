@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paletta "notte alpina" (allineata alla landing page) -->
+    <color name="night_950">#05080D</color>
+    <color name="night_900">#0A1018</color>
+    <color name="night_800">#101926</color>
+    <color name="night_700">#1A2739</color>
+    <color name="mint_400">#34D399</color>
+    <color name="mint_500">#10B981</color>
+    <color name="sky_400">#38BDF8</color>
+</resources>

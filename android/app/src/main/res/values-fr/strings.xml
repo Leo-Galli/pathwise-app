@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PathWise</string>
+    <string name="tagline">Randonnée sûre, décisions intelligentes</string>
+
+    <string name="nav_mappa">Carte</string>
+    <string name="nav_valutazione">Évaluation</string>
+    <string name="nav_storico">Historique</string>
+
+    <string name="engine_title">Moteur PathWise</string>
+    <string name="engine_group">Groupe</string>
+    <string name="engine_add_member">Ajouter</string>
+    <string name="engine_age_years">ans</string>
+    <string name="engine_fitness">Niveau sportif</string>
+    <string name="engine_fitness_principiante">Débutant</string>
+    <string name="engine_fitness_medio">Moyen</string>
+    <string name="engine_fitness_allenato">Entraîné</string>
+    <string name="engine_weight">Poids moyen</string>
+    <string name="engine_backpack">Sac moyen</string>
+    <string name="engine_trail">Itinéraire</string>
+    <string name="engine_distance">Distance</string>
+    <string name="engine_ascent">Dénivelé positif</string>
+    <string name="engine_max_altitude">Altitude max</string>
+    <string name="engine_terrain">Terrain</string>
+    <string name="engine_has_dogs">Chien dans le groupe</string>
+    <string name="engine_has_vertigo">Vertige</string>
+
+    <string name="engine_verdict">Verdict</string>
+    <string name="engine_status_suitable">Accessible à tous</string>
+    <string name="engine_status_training">Entraînement requis</string>
+    <string name="engine_status_not_recommended">Non recommandé</string>
+    <string name="engine_time">Durée estimée</string>
+    <string name="engine_calories">Calories</string>
+    <string name="engine_met">MET moyen</string>
+    <string name="engine_warnings">Alertes de sécurité</string>
+    <string name="engine_warnings_none">Aucune alerte critique : l\'itinéraire convient au groupe.</string>
+
+    <string name="map_layers">Couches</string>
+    <string name="layer_rifugi">Refuges</string>
+    <string name="layer_bivacchi">Bivouacs</string>
+    <string name="layer_panorami">Belvédères</string>
+    <string name="layer_sorgenti">Sources</string>
+    <string name="layer_pericoli">Dangers</string>
+    <string name="map_start_recording">Démarrer l\'enregistrement</string>
+    <string name="map_stop_recording">Arrêter l\'enregistrement</string>
+    <string name="map_altitude">Altitude</string>
+    <string name="map_distance">Distance</string>
+    <string name="map_duration">Durée</string>
+    <string name="map_calories_live">Calories</string>
+    <string name="map_3d">3D</string>
+    <string name="map_offline_regions">Régions hors ligne</string>
+    <string name="map_sync_health">Synchroniser avec Health Connect</string>
+    <string name="map_health_granted">Health Connect connecté : synchronisation automatique</string>
+    <string name="map_track_saved">Trace enregistrée et synchronisée avec les apps fitness</string>
+
+    <string name="sos_title">SOS</string>
+    <string name="sos_send_sms">Envoyer un SMS d\'urgence</string>
+    <string name="sos_call">Appeler le 112</string>
+    <string name="sos_body_template">SOS PathWise ! %1$s — Lien : %2$s</string>
+
+    <string name="history_empty">Aucune trace enregistrée. Démarrez un enregistrement depuis la carte.</string>
+    <string name="history_delete">Supprimer</string>
+
+    <string name="perm_location_reason">PathWise utilise votre position pour enregistrer l\'itinéraire et les alertes de sécurité.</string>
+    <string name="perm_health_reason">PathWise lit le poids et la fréquence cardiaque, écrit calories, pas et la session de randonnée.</string>
+</resources>

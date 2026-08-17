@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PathWise</string>
+    <string name="tagline">Safe trekking, smart decisions</string>
+
+    <string name="nav_mappa">Map</string>
+    <string name="nav_valutazione">Evaluate</string>
+    <string name="nav_storico">History</string>
+
+    <string name="engine_title">PathWise Engine</string>
+    <string name="engine_group">Group</string>
+    <string name="engine_add_member">Add</string>
+    <string name="engine_age_years">yrs</string>
+    <string name="engine_fitness">Fitness level</string>
+    <string name="engine_fitness_principiante">Beginner</string>
+    <string name="engine_fitness_medio">Average</string>
+    <string name="engine_fitness_allenato">Trained</string>
+    <string name="engine_weight">Average weight</string>
+    <string name="engine_backpack">Average backpack</string>
+    <string name="engine_trail">Trail</string>
+    <string name="engine_distance">Distance</string>
+    <string name="engine_ascent">Positive elevation</string>
+    <string name="engine_max_altitude">Max altitude</string>
+    <string name="engine_terrain">Terrain</string>
+    <string name="engine_has_dogs">Dog in group</string>
+    <string name="engine_has_vertigo">Fear of heights</string>
+
+    <string name="engine_verdict">Verdict</string>
+    <string name="engine_status_suitable">Suitable for all</string>
+    <string name="engine_status_training">Training required</string>
+    <string name="engine_status_not_recommended">Not recommended</string>
+    <string name="engine_time">Estimated time</string>
+    <string name="engine_calories">Calories</string>
+    <string name="engine_met">Avg MET</string>
+    <string name="engine_warnings">Safety warnings</string>
+    <string name="engine_warnings_none">No critical warnings: trail fits the whole group.</string>
+
+    <string name="map_layers">Layers</string>
+    <string name="layer_rifugi">Refuges</string>
+    <string name="layer_bivacchi">Bivouacs</string>
+    <string name="layer_panorami">Viewpoints</string>
+    <string name="layer_sorgenti">Water sources</string>
+    <string name="layer_pericoli">Hazards</string>
+    <string name="map_start_recording">Start recording</string>
+    <string name="map_stop_recording">Stop recording</string>
+    <string name="map_altitude">Altitude</string>
+    <string name="map_distance">Distance</string>
+    <string name="map_duration">Duration</string>
+    <string name="map_calories_live">Calories</string>
+    <string name="map_3d">3D</string>
+    <string name="map_offline_regions">Offline regions</string>
+    <string name="map_sync_health">Sync with Health Connect</string>
+    <string name="map_health_granted">Health Connect connected: sync is automatic</string>
+    <string name="map_track_saved">Track saved and synced with fitness apps</string>
+
+    <string name="sos_title">SOS</string>
+    <string name="sos_send_sms">Send emergency SMS</string>
+    <string name="sos_call">Call 112</string>
+    <string name="sos_body_template">PathWise SOS! %1$s — Link: %2$s</string>
+
+    <string name="history_empty">No recorded tracks. Start recording from the map.</string>
+    <string name="history_delete">Delete</string>
+
+    <string name="perm_location_reason">PathWise uses your location to record the route and for safety warnings.</string>
+    <string name="perm_health_reason">PathWise reads weight and heart rate, and writes calories, steps and the trekking session.</string>
+</resources>
